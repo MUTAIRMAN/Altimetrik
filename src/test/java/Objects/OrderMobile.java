@@ -82,7 +82,7 @@ public class OrderMobile {
 		act.moveToElement(imgPhone);
 		act.click(imgPhone).build().perform();
 
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		//wt.until(ExpectedConditions.visibilityOf(popUpPhone));
 		
 		Assert.assertEquals(popUpPhone.isDisplayed(),true);
