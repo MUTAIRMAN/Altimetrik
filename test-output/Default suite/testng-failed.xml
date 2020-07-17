@@ -5,8 +5,8 @@
     <classes>
       <class name="Test.com.muthuAltimetrik.TestCaseOne">
         <methods>
-          <include name="TestCaseTwo"/>
           <include name="QuitDriver"/>
+          <include name="TestCaseOne"/>
           <include name="LaunchDriver"/>
         </methods>
       </class> <!-- Test.com.muthuAltimetrik.TestCaseOne -->

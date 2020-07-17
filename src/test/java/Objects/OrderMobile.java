@@ -29,17 +29,17 @@ public class OrderMobile {
 
 	public OrderMobile(WebDriver driver) {
 		this.driver = driver;
-		AjaxElementLocatorFactory aj = new AjaxElementLocatorFactory(driver, 20);
+		AjaxElementLocatorFactory aj = new AjaxElementLocatorFactory(driver,20);
 		PageFactory.initElements(aj, this);
 	}
 	
 	@FindBy(xpath="//span[contains(text(),\"Back to top\")]")
 	WebElement objFindBy;
 
-	@FindBy(xpath = "//span[text()=\"Apple iPhone X (64GB) - Space Grey\"]")
+	@FindBy(xpath="//span[contains(text(),'Redmi 8A Dual (Sea Blue, 3GB RAM, 64GB Storage) – Dual Cameras & 5,000 mAH Battery')]")
 	WebElement objPhoneName;
 	
-	@FindBy(xpath="//img[@alt='Apple iPhone X (64GB) - Space Grey']")
+	@FindBy(xpath="//img[@alt='Redmi 8A Dual (Sea Blue, 3GB RAM, 64GB Storage) &ndash; Dual Cameras &amp; 5,000 mAH Battery']")
 	WebElement imgPhone;
 	
 	@FindBy(xpath="//div[@class=\"a-popover-inner\"]")
@@ -66,15 +66,12 @@ public class OrderMobile {
 	
 	
 	public void verifyNewPage() {
+		
 		objPhoneName.click();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		Set<String> windows = driver.getWindowHandles();
-		for (String window : windows) {
-			driver.switchTo().window(window);
-			if (driver.getTitle().contains("Apple iPhone X (64GB) - Space Grey: Amazon.in: Electronics")) {
-				Assert.assertTrue("Page Displayed", true);
-			}
-		}
+		UtilityFunction ut=new UtilityFunction(this.driver);
+		ut.NavigateToPage("Redmi 8A Dual (Sea Blue, 3GB RAM, 64GB Storage) – Dual Cameras & 5,000 mAH Battery: Amazon.in: Electronics");
+		System.out.println(driver.getTitle());
 		WebDriverWait wt=new WebDriverWait(driver,20);
 		Assert.assertEquals(imgPhone.isDisplayed(),true);
 		
@@ -82,8 +79,9 @@ public class OrderMobile {
 		act.moveToElement(imgPhone);
 		act.click(imgPhone).build().perform();
 
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		//wt.until(ExpectedConditions.visibilityOf(popUpPhone));
+		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+		
+		wt.until(ExpectedConditions.visibilityOf(popUpPhone));
 		
 		Assert.assertEquals(popUpPhone.isDisplayed(),true);
 		
@@ -108,7 +106,9 @@ public class OrderMobile {
 		
 		AddToCartButton.click();
 */
+	
 		Thread.sleep(2000);
+		UtilityFunction ut=new UtilityFunction(driver);
 		Actions act=new Actions(driver);
 		act.moveToElement(locationbtn);
 		act.click(locationbtn).build().perform();
@@ -118,6 +118,7 @@ public class OrderMobile {
 		apply.click();
 		JavascriptExecutor jt=(JavascriptExecutor)driver;
 		jt.executeScript("arguments[0]. scrollIntoView();",objFindBy);
-		
+		ut.closeCurrentTab();
+		ut.NavigateToPage("Amazon.in");
 	}
 }

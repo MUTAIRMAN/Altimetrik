@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
-  <test thread-count="5" name="hai(failed)" parallel="methods">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Test.com.muthuAltimetrik.ActionListener"/>
+  </listeners>
+  <test thread-count="5" name="hai(failed)">
     <classes>
       <class name="Test.com.muthuAltimetrik.TestCaseOne">
         <methods>
-          <include name="TestCaseOne1"/>
+          <include name="TestCaseTwoSelectLanguage"/>
           <include name="QuitDriver"/>
+          <include name="TestCaseOne"/>
           <include name="LaunchDriver"/>
         </methods>
       </class> <!-- Test.com.muthuAltimetrik.TestCaseOne -->

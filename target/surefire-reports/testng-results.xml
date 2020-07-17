@@ -1,24 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="29181" started-at="2020-04-27T14:19:57Z" finished-at="2020-04-27T14:20:26Z">
+  <suite name="Suite" duration-ms="81300" started-at="2020-07-17T14:22:37Z" finished-at="2020-07-17T14:23:59Z">
     <groups>
     </groups>
-    <test name="hai" duration-ms="29181" started-at="2020-04-27T14:19:57Z" finished-at="2020-04-27T14:20:26Z">
+    <test name="hai" duration-ms="81300" started-at="2020-07-17T14:22:37Z" finished-at="2020-07-17T14:23:59Z">
+      <class name="Test.com.muthuAltimetrik.TestCaseTwo">
+        <test-method status="PASS" signature="Books()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseTwo@2b98378d]" name="Books" duration-ms="10721" started-at="2020-07-17T14:23:08Z" finished-at="2020-07-17T14:23:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Books -->
+      </class> <!-- Test.com.muthuAltimetrik.TestCaseTwo -->
       <class name="Test.com.muthuAltimetrik.TestCaseOne">
-        <test-method status="PASS" signature="LaunchDriver()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseOne@2c9f9fb0]" name="LaunchDriver" is-config="true" duration-ms="10075" started-at="2020-04-27T14:19:57Z" finished-at="2020-04-27T14:20:07Z">
+        <test-method status="PASS" signature="LaunchDriver()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseOne@4b9e13df]" name="LaunchDriver" is-config="true" duration-ms="14208" started-at="2020-07-17T14:22:37Z" finished-at="2020-07-17T14:22:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchDriver -->
-        <test-method status="PASS" signature="TestCaseOne()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseOne@2c9f9fb0]" name="TestCaseOne" duration-ms="18247" started-at="2020-04-27T14:20:07Z" finished-at="2020-04-27T14:20:25Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseTwo@2b98378d]" name="beforeTest" is-config="true" duration-ms="16056" started-at="2020-07-17T14:22:52Z" finished-at="2020-07-17T14:23:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="TestCaseOne()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseOne@4b9e13df]" name="TestCaseOne" duration-ms="35039" started-at="2020-07-17T14:23:08Z" finished-at="2020-07-17T14:23:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseOne -->
-        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseOne@2c9f9fb0]" name="QuitDriver" is-config="true" duration-ms="831" started-at="2020-04-27T14:20:25Z" finished-at="2020-04-27T14:20:26Z">
+        <test-method status="PASS" signature="TestCaseTwo()[pri:1, instance:Test.com.muthuAltimetrik.TestCaseOne@4b9e13df]" name="TestCaseTwo" duration-ms="764" started-at="2020-07-17T14:23:43Z" finished-at="2020-07-17T14:23:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseTwo -->
+        <test-method status="PASS" signature="TestCaseThree()[pri:2, instance:Test.com.muthuAltimetrik.TestCaseOne@4b9e13df]" name="TestCaseThree" duration-ms="12180" started-at="2020-07-17T14:23:44Z" finished-at="2020-07-17T14:23:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseThree -->
+        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseOne@4b9e13df]" name="QuitDriver" is-config="true" duration-ms="2112" started-at="2020-07-17T14:23:56Z" finished-at="2020-07-17T14:23:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitDriver -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Test.com.muthuAltimetrik.TestCaseTwo@2b98378d]" name="afterTest" is-config="true" duration-ms="819" started-at="2020-07-17T14:23:58Z" finished-at="2020-07-17T14:23:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- Test.com.muthuAltimetrik.TestCaseOne -->
     </test> <!-- hai -->
   </suite> <!-- Suite -->

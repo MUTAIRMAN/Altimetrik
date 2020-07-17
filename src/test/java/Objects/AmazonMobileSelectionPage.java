@@ -1,5 +1,7 @@
 package Objects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,13 +16,13 @@ public class AmazonMobileSelectionPage {
 
 	WebDriver driver;
 	
-	@FindBy(xpath="//button[contains(text(),\"Featured brands in mobiles\")]")
-	WebElement ObjFeatured;
-	@FindBy(xpath="//div[@class='acs-ln-links']/descendant::ul/li/a[text()='Apple']")
-	WebElement ObjApple;
+	@FindBy(xpath="(//a/span[text()='See more'])[1]")
+	WebElement ObjMore;
+	@FindBy(xpath="//input[@name='s-ref-checkbox-Redmi']")
+	WebElement ObjRedmi;
 	@FindBy(xpath="//i[@class='a-icon a-icon-star-medium a-star-medium-4']")
 	WebElement Obj4;
-	@FindBy(xpath="(//i[@class='a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom'])[1]")
+	@FindBy(xpath="(//i[@class='a-icon a-icon-star-small a-star-small-4 aok-align-bottom'])[1]")
 	WebElement ObjFour;
 	@FindBy(xpath="//a[text()=\"See all customer reviews\"]")
 	WebElement ObjPopup;
@@ -33,8 +35,8 @@ public class AmazonMobileSelectionPage {
 	
 	
 	public void SelectionofBrand() {
-		ObjFeatured.click();
-		ObjApple.click();
+		ObjRedmi.click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Obj4.click();
 	}
 	
