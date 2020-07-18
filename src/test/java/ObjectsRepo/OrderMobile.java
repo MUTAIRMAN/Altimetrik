@@ -1,4 +1,4 @@
-package Objects;
+package ObjectsRepo;
 
 import static org.testng.Assert.assertEquals;
 

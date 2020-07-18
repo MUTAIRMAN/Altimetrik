@@ -2,7 +2,7 @@ package Test.com.muthuAltimetrik;
 
 import org.testng.annotations.Test;
 
-import Objects.BooksFirstPage;
+import ObjectsRepo.BooksFirstPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeTest;
