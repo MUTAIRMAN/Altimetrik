@@ -97,7 +97,7 @@ public class TestCaseOne {
 		 */
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1)
 	public void TestCaseTwo() throws InterruptedException {
 		// ExtentTest test = reports.startTest("TestCaseTwo");
 		AmazonFirstPage objFirst = new AmazonFirstPage(driver);
@@ -110,7 +110,7 @@ public class TestCaseOne {
 		// reports.flush();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,enabled=false)
 	public void TestCaseThree() throws IOException, InterruptedException {
 		driver.get("https://easyupload.io/");
 		easyupload eu = new easyupload(driver);
