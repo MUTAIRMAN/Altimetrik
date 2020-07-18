@@ -70,7 +70,7 @@ public class TestCaseOne {
 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-	//	options.addArguments("--headless");
+		options.addArguments("--headless");
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-dev-shm-usage");
 		driver = new ChromeDriver(options);
@@ -110,7 +110,7 @@ public class TestCaseOne {
 		// reports.flush();
 	}
 
-	@Test(priority = 2,enabled=false)
+	@Test(priority = 2, enabled = false)
 	public void TestCaseThree() throws IOException, InterruptedException {
 		driver.get("https://easyupload.io/");
 		easyupload eu = new easyupload(driver);
