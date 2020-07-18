@@ -67,18 +67,21 @@ public class TestCaseOne {
 
 	@BeforeTest()
 	public void LaunchDriver() throws MalformedURLException {
-		
+
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		driver = new ChromeDriver(options);
 		driver.get("https://www.amazon.in/");
 		driver.manage().window().maximize();
 
-		
 	}
 
 	@Test(priority = 0)
 	public void TestCaseOne() throws IOException, ParseException, InterruptedException, AWTException {
-	//	ExtentTest test = reports.startTest("TestCaseOne");
+		// ExtentTest test = reports.startTest("TestCaseOne");
 		AmazonFirstPage objFirst = new AmazonFirstPage(driver);
 		objFirst.ClickMobileLink();
 
@@ -89,22 +92,22 @@ public class TestCaseOne {
 		om.verifyNewPage();
 		om.SelectQuantity();
 
-	/*	reports.endTest(test);
-		reports.flush();
-*/
+		/*
+		 * reports.endTest(test); reports.flush();
+		 */
 	}
 
-	@Test(priority = 1,enabled=false)
+	@Test(priority = 1, enabled = false)
 	public void TestCaseTwo() throws InterruptedException {
-	//	ExtentTest test = reports.startTest("TestCaseTwo");
+		// ExtentTest test = reports.startTest("TestCaseTwo");
 		AmazonFirstPage objFirst = new AmazonFirstPage(driver);
 		Assert.assertEquals(objFirst.objLanButton1().isDisplayed(), true);
-	//	test.log(LogStatus.PASS, objFirst.objLanButton1().getText());
+		// test.log(LogStatus.PASS, objFirst.objLanButton1().getText());
 		objFirst.moveToLanguage();
 		Assert.assertEquals(objFirst.objEnglish1().isDisplayed(), true);
 		Assert.assertEquals(objFirst.objhindi1().isDisplayed(), true);
-	//	reports.endTest(test);
-	//	reports.flush();
+		// reports.endTest(test);
+		// reports.flush();
 	}
 
 	@Test(priority = 2)
@@ -116,9 +119,6 @@ public class TestCaseOne {
 
 	}
 
-
-	
-	
 	@AfterTest()
 	public void QuitDriver() {
 		driver.quit();
