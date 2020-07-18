@@ -1,6 +1,7 @@
 package ObjectsRepo;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +33,8 @@ public class BooksFirstPage {
 		uf.MoveTo(pg.objBooks);
 
 		pg.objBooks.click();
-		String temp = "Books;Advanced Search;New Releases & Pre-orders;Best Sellers;;Browse Genres;;Children's & Young Adult;;Textbooks;;Exam Central;;All Indian Languages;";
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		String temp = "Books;Advanced Search;New Releases & Pre-orders;Best Sellers;;Browse Genres;;Children's & Young Adult;;Textbooks;;Exam Central;;;";
 		String[] arr = temp.split(";", -1);
 		List<WebElement> li = objsubHeader.findElements(By.tagName("span"));
 		if (arr.length != li.size()) {
@@ -40,9 +42,14 @@ public class BooksFirstPage {
 			return flag;
 		}
 		for (int i = 0; i < arr.length; i++) {
+			System.out.println(li.get(i).getText());
+			System.out.println(arr[i]);
+			
 			if (li.get(i).getText().equals(arr[i]))
 				continue;
 			else {
+				System.out.println(li.get(i).getText());
+				System.out.println(arr[i]);
 				flag = false;
 				break;
 			}
