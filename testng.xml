@@ -6,7 +6,7 @@
 		<listener
 			class-name="Test.com.muthuAltimetrik.ActionListener" />
 	</listeners>
-	<test name="hai" parallel="classes" thread-count="4">
+	<test name="Amazon">
 
 		<classes>
 			<class name="Test.com.muthuAltimetrik.TestCaseOne" />

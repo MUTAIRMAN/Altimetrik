@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,11 +108,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Test.com.muthuAltimetrik.TestCaseOne" hash-for-method="TestCaseOne">TestCaseOne</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Test.com.muthuAltimetrik.TestCaseOne" hash-for-method="TestCaseThree">TestCaseThree</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,13 +138,6 @@
                   <a name="TestCaseOne">
                   </a> <!-- TestCaseOne -->
                   <span class="method-name">TestCaseOne</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestCaseThree">
-                  </a> <!-- TestCaseThree -->
-                  <span class="method-name">TestCaseThree</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -189,12 +177,12 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Test.com.muthuAltimetrik.ActionListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;4&quot; verbose=&quot;0&quot; name=&quot;hai&quot; parallel=&quot;classes&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Amazon&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Test.com.muthuAltimetrik.TestCaseOne&quot;/&gt;
       &lt;class name=&quot;Test.com.muthuAltimetrik.TestCaseTwo&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- hai --&gt;
+  &lt;/test&gt; &lt;!-- Amazon --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,7 +194,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">hai (2 classes)</span>
+                <span class="test-name">Amazon (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,28 +220,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TestCaseOne')
 data.setCell(0, 2, 'Test.com.muthuAltimetrik.TestCaseOne')
-data.setCell(0, 3, 35039);
+data.setCell(0, 3, 31261);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TestCaseThree')
-data.setCell(1, 2, 'Test.com.muthuAltimetrik.TestCaseOne')
-data.setCell(1, 3, 12180);
+data.setCell(1, 1, 'Books')
+data.setCell(1, 2, 'Test.com.muthuAltimetrik.TestCaseTwo')
+data.setCell(1, 3, 5668);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Books')
-data.setCell(2, 2, 'Test.com.muthuAltimetrik.TestCaseTwo')
-data.setCell(2, 3, 10721);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TestCaseTwo')
-data.setCell(3, 2, 'Test.com.muthuAltimetrik.TestCaseOne')
-data.setCell(3, 3, 764);
+data.setCell(2, 1, 'TestCaseTwo')
+data.setCell(2, 2, 'Test.com.muthuAltimetrik.TestCaseOne')
+data.setCell(2, 3, 536);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 37 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -268,9 +252,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Test.com.muthuAltimetrik.TestCaseOne</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TestCaseThree</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -289,37 +280,39 @@ return data;
               <div class="chronological-class-name">Test.com.muthuAltimetrik.TestCaseTwo</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">14208 ms</span>
+                <span class="method-start">14155 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">Books</span>
-                <span class="method-start">30369 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.com.muthuAltimetrik.TestCaseOne</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TestCaseOne</span>
-                <span class="method-start">30371 ms</span>
+                <span class="method-start">29004 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.com.muthuAltimetrik.TestCaseTwo</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Books</span>
+                <span class="method-start">60269 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.com.muthuAltimetrik.TestCaseOne</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TestCaseTwo</span>
-                <span class="method-start">65411 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestCaseThree</span>
-                <span class="method-start">66182 ms</span>
+                <span class="method-start">65937 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">QuitDriver</span>
-                <span class="method-start">78368 ms</span>
+                <span class="method-start">66473 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.com.muthuAltimetrik.TestCaseTwo</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">80480 ms</span>
+                <span class="method-start">67422 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
