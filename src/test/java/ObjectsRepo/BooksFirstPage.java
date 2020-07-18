@@ -54,7 +54,6 @@ public class BooksFirstPage {
 				break;
 			}
 		}
-		//I LOVE you
 		
 
 		return flag;
