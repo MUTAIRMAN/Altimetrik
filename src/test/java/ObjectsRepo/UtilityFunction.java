@@ -80,4 +80,19 @@ public class UtilityFunction {
 
 		}
 	}
+	
+	public void NavigateToPage(int intIndex) {
+		Set<String> windows = driver.getWindowHandles();
+		int ind=0;
+		for (String window : windows) {
+			driver.switchTo().window(window);
+			ind++;
+			if (ind==intIndex) {
+				Assert.assertTrue(true, "Page is Displayed");
+				break;
+			}
+
+		}
+	}
+
 }

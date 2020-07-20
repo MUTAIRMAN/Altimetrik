@@ -36,10 +36,10 @@ public class OrderMobile {
 	@FindBy(xpath="//span[contains(text(),\"Back to top\")]")
 	WebElement objFindBy;
 
-	@FindBy(xpath="//span[contains(text(),'Redmi 8A Dual (Sea Blue, 3GB RAM, 64GB Storage) – Dual Cameras & 5,000 mAH Battery')]")
+	@FindBy(xpath="(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2'])[1]")
 	WebElement objPhoneName;
 	
-	@FindBy(xpath="//img[@alt='Redmi 8A Dual (Sea Blue, 3GB RAM, 64GB Storage) &ndash; Dual Cameras &amp; 5,000 mAH Battery']")
+	@FindBy(xpath="//div[@id='imgTagWrapperId']")
 	WebElement imgPhone;
 	
 	@FindBy(xpath="//div[@class=\"a-popover-inner\"]")
@@ -70,7 +70,7 @@ public class OrderMobile {
 		objPhoneName.click();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		UtilityFunction ut=new UtilityFunction(this.driver);
-		ut.NavigateToPage("Redmi 8A Dual (Sea Blue, 3GB RAM, 64GB Storage) – Dual Cameras & 5,000 mAH Battery: Amazon.in: Electronics");
+		ut.NavigateToPage(2);
 		System.out.println(driver.getTitle());
 		WebDriverWait wt=new WebDriverWait(driver,20);
 		Assert.assertEquals(imgPhone.isDisplayed(),true);

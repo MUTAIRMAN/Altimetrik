@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.com.muthuAltimetrik.TestCaseTwo">
+      <class name="Test.com.muthuAltimetrik.TestCaseOne">
         <methods>
-          <include name="afterTest"/>
-          <include name="Books"/>
-          <include name="beforeTest"/>
+          <include name="QuitDriver"/>
+          <include name="TestCaseOne"/>
+          <include name="LaunchDriver"/>
         </methods>
-      </class> <!-- Test.com.muthuAltimetrik.TestCaseTwo -->
+      </class> <!-- Test.com.muthuAltimetrik.TestCaseOne -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
